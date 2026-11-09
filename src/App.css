@@ -1,0 +1,241 @@
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+header h1 {
+  font-size: 1.9rem;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.settle {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0 20px;
+  font-weight: 600;
+}
+
+input {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+td input {
+  width: 72px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+}
+
+.card h3 {
+  font-size: 0.95rem;
+  margin: 18px 0 8px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+}
+
+@media (max-width: 860px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: var(--hover);
+}
+
+tr.active {
+  background: var(--accent-soft);
+}
+
+.tag {
+  margin-left: 6px;
+  font-size: 0.7rem;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+dt {
+  color: var(--muted);
+}
+
+dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.scroll {
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.api {
+  margin-top: 14px;
+}
+
+button {
+  font: inherit;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.error {
+  color: var(--warn);
+}
+
+.chart {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chart .grid {
+  stroke: var(--border);
+}
+
+.chart .tick,
+.chart .axis-label {
+  fill: var(--muted);
+  font-size: 12px;
+}
+
+.chart .curve {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.5;
+}
+
+.chart .point {
+  cursor: pointer;
+}
+
+.chart .point circle {
+  fill: var(--surface);
+  stroke: var(--accent);
+  stroke-width: 2.5;
+}
+
+.chart .point.selected circle {
+  fill: var(--accent);
+}
+
+.chart .point-label {
+  fill: var(--text);
+  font-size: 11px;
+}
+
+.chart .point:focus {
+  outline: none;
+}
+
+.chart .point:focus circle {
+  stroke-width: 4;
+}
+
+footer {
+  margin-top: 8px;
+}
+
+footer a {
+  color: var(--accent);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+td,
+th {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .chart .point-label {
+    display: none;
+  }
+
+  .chart .point.selected .point-label {
+    display: inline;
+    font-size: 20px;
+  }
+
+  .chart .tick,
+  .chart .axis-label {
+    font-size: 20px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.columns > * {
+  min-width: 0;
+}
