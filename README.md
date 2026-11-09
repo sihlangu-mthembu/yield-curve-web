@@ -14,7 +14,7 @@ An interactive website for South African government bonds, built with **React an
 - **Bond table** with editable yields, clean prices and accrued interest for 11 RSA fixed-rate bonds.
 - **Detail panel**: ex-coupon status, accrued interest, clean and all-in price, and every remaining cash flow.
 - **Settlement date picker**: matured bonds drop off the curve automatically.
-- **Optional API cross-check**: when built with `VITE_API_URL` pointing at [rsa-bond-api](https://github.com/sihlangu-mthembu/rsa-bond-api), a button compares the browser's price with the server's.
+- **Live API cross-check**: the deployed site is built with `VITE_API_URL` set to the live [rsa-bond-api](https://rsa-bond-api.onrender.com/docs), so a button compares the browser's price with the server's (the free API host may take a minute to wake up).
 - Responsive layout and automatic dark mode.
 
 ## How it fits together
